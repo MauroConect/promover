@@ -1,247 +1,230 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>demo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-ws9X7Vb17FjgY7VhOXiwzGZoHOkZtmmrvpgjK1gCc/o1X3RV+0+h0JcQ2KjZj1J/zCz/wnJ/AkLQI+J9aXN+kQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-ws9X7Vb17FjgY7VhOXiwzGZoHOkZtmmrvpgjK1gCc/o1X3RV+0+h0JcQ2KjZj1J/zCz/wnJ/AkLQI+J9aXN+kQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">Tu Localidad</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Categorias</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-          </ul>
+  <style>
+    /* Estilos previos... */
+
+    .carousel-container {
+      background-color: #f7f7f7; /* Color de fondo del carrusel */
+      padding: 20px;
+      border-radius: 10px; /* Bordes redondeados para el carrusel */
+    }
+
+    /* Estilos para mantener los elementos centrados */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .col {
+      margin: 10px;
+    }
+
+    .card {
+      border: none; /* Elimina el borde predeterminado de las tarjetas */
+      border-radius: 10px; /* Bordes redondeados para las tarjetas */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
+    }
+
+    .card-img-top {
+      border-radius: 10px 10px 0 0; /* Bordes redondeados solo en la parte superior de la imagen */
+    }
+
+    .card-title {
+      font-size: 24px;
+      margin-top: 10px;
+      color: #333; /* Color del título de la tarjeta */
+    }
+
+    .card-text {
+      color: #666; /* Color del texto de la tarjeta */
+    }
+
+    .btn-primary {
+      background-color: #007bff; /* Color del botón */
+      border-color: #007bff; /* Color del borde del botón */
+      color: #fff; /* Color del texto del botón */
+    }
+
+    .table-responsive {
+      margin-top: 20px; /* Ajusta el espacio entre el carrusel y la tabla */
+    }
+
+    .banner-img {
+      max-width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+      height: auto; /* Ajusta automáticamente la altura según el ancho */
+      border-radius: 10px; /* Bordes redondeados para la imagen */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Tu Localidad</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categorias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+
+  <div class="container text-center">
+    <img src="/img/banner.jpg" class="img-fluid banner-img" alt="Banner">
+  </div>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            ¿Qué Ofrecemos?
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">Al contrario del pensamiento popular, el texto de Lorem Ipsum no es si.</p>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
 
-  </br>
-  </br>
+  <div class="container text-center">
+    <div class="row">
+      <h5>Contactanos</h5>
+      <div class="col-sm-3 col-6">
+        <a href="#" class="social-icon">
+          <i class="fab fa-instagram fa-3x"></i>
+        </a>
+      </div>
+      <div class="col-sm-3 col-6">
+        <a href="#" class="social-icon">
+          <i class="fab fa-facebook fa-3x"></i>
+        </a>
+      </div>
+      <div class="col-sm-3 col-6">
+        <a href="#" class="social-icon">
+          <i class="fas fa-map-marker-alt fa-3x"></i>
+        </a>
+      </div>
+      <div class="col-sm-3 col-6">
+        <a href="tel:123456789" class="social-icon">
+          <i class="fas fa-phone fa-3x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
-  <img src="/img/banner.jpg" class="img-fluid" alt="...">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Día</th>
+                <th scope="col">Horarios de Atención</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lunes</td>
+                <td>9:00 AM - 6:00 PM</td>
+              </tr>
+              <tr>
+                <td>Martes</td>
+                <td>9:00 AM - 6:00 PM</td>
+              </tr>
+              <tr>
+                <td>Miércoles</td>
+                <td>9:00 AM - 6:00 PM</td>
+              </tr>
+              <tr>
+                <td>Jueves</td>
+                <td>9:00 AM - 6:00 PM</td>
+              </tr>
+              <tr>
+                <td>Viernes</td>
+                <td>9:00 AM - 6:00 PM</td>
+              </tr>
+              <tr>
+                <td>Sábado</td>
+                <td>10:00 AM - 3:00 PM</td>
+              </tr>
+              <tr>
+                <td>Domingo</td>
+                <td>Cerrado</td>
+              </tr>
+              <!-- Agrega aquí los demás días y horarios -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="container text-center">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                      ¿Que Ofrecemos?
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title"></h5>
-                      <p class="card-text">Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo.</p>
-                    </div>
-                  </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <h5>Contactanos</h5>
-                  <div class="col-sm-3 col-6">
-                    <a href="#" class="social-icon">
-                      <i class="fab fa-instagram fa-3x"></i>
-                    </a>
-                  </div>
-                  <div class="col-sm-3 col-6">
-                    <a href="#" class="social-icon">
-                      <i class="fab fa-facebook fa-3x"></i>
-                    </a>
-                  </div>
-                  <div class="col-sm-3 col-6">
-                    <a href="#" class="social-icon">
-                      <i class="fas fa-map-marker-alt fa-3x"></i>
-                    </a>
-                  </div>
-                  <div class="col-sm-3 col-6">
-                    <a href="tel:123456789" class="social-icon">
-                      <i class="fas fa-phone fa-3x"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              
-              
-
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">Día</th>
-                    <th scope="col">Horarios de Atención</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Lunes</td>
-                    <td>9:00 AM - 6:00 PM</td>
-                  </tr>
-                  <tr>
-                    <td>Martes</td>
-                    <td>9:00 AM - 6:00 PM</td>
-                  </tr>
-                  <tr>
-                    <td>Miércoles</td>
-                    <td>9:00 AM - 6:00 PM</td>
-                  </tr>
-                  <tr>
-                    <td>Jueves</td>
-                    <td>9:00 AM - 6:00 PM</td>
-                  </tr>
-                  <tr>
-                    <td>Viernes</td>
-                    <td>9:00 AM - 6:00 PM</td>
-                  </tr>
-                  <tr>
-                    <td>Sábado</td>
-                    <td>10:00 AM - 3:00 PM</td>
-                  </tr>
-                  <tr>
-                    <td>Domingo</td>
-                    <td>Cerrado</td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              
-            </br>
-            </br>
-            </br>
-            <title>Título de tu página</title>
-            <!-- Agrega aquí los enlaces a las hojas de estilo de Bootstrap y CSS personalizado -->
-          </head>
-          <body>
-          
-          <style>
-            h1 {
-              text-align: center;
-              margin-top: 30px;
-              color: #333; /* Color del título */
-            }
-          
-            .carousel-container {
-              background-color: #f7f7f7; /* Color de fondo del carrusel */
-              padding: 20px;
-              border-radius: 10px; /* Bordes redondeados para el carrusel */
-            }
-          
-            /* Estilos para mantener los elementos centrados */
-            .container {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-wrap: wrap;
-            }
-          
-            .col {
-              margin: 10px;
-            }
-          
-            .card {
-              border: none; /* Elimina el borde predeterminado de las tarjetas */
-              border-radius: 10px; /* Bordes redondeados para las tarjetas */
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
-            }
-          
-            .card-img-top {
-              border-radius: 10px 10px 0 0; /* Bordes redondeados solo en la parte superior de la imagen */
-            }
-          
-            .card-title {
-              font-size: 24px;
-              margin-top: 10px;
-              color: #333; /* Color del título de la tarjeta */
-            }
-          
-            .card-text {
-              color: #666; /* Color del texto de la tarjeta */
-            }
-          
-            .btn-primary {
-              background-color: #007bff; /* Color del botón */
-              border-color: #007bff; /* Color del borde del botón */
-              color: #fff; /* Color del texto del botón */
-            }
-          </style>
-          
-          <h1>Productos y Servicios</h1>
-          
-          <div class="container text-center">
-            <div class="row align-items-center">
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="/img/comida.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Contacto</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="/img/comida.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Contacto</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="/img/comida.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Contacto</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4">
+        <!-- Contenido de la primera columna -->
+        <div class="card" style="width: 18rem;">
+          <img src="/img/comida.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Contacto</a>
           </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <!-- Contenido de la segunda columna -->
+        <div class="card" style="width: 18rem;">
+          <img src="/img/comida.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Contacto</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <!-- Contenido de la tercera columna -->
+        <div class="card" style="width: 18rem;">
+          <img src="/img/comida.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                  <!--<style>
-                        .container-boton{
-                        background-color: #2e6329;
-                        border: 1px solid #fff;
-                        position: fixed;
-                        z-index: 999;
-                        border-radius: 50%;
-                        bottom: 20px;
-                        right: 25px;
-                        padding: 25px;
-                        transition: ease 0.3s;
-                        animation: efecto 1.2s infinite;
-  }
-                  </style>
-                  <div class="container-boton">
-                    <a href="https://walink.co/6d110b" target="_blank">
-                        <img class="boton" src="img/icono.png" alt="">
-                    </a>
-                </div>-->
-                </div>
-              </div>
-                    <!-- Scripts de Bootstrap y otros -->
-                      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-                      <!-- Otros scripts personalizados -->
-                  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-  </body> 
+  <!-- Scripts de Bootstrap y otros -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
