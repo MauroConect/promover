@@ -269,56 +269,105 @@
       </div>
     </div>
 
-    <h1>Corredor Turistico</h1>
-
+    <style>
+      h1 {
+        text-align: center;
+        margin-top: 30px;
+        color: #333; /* Color del título */
+      }
+    
+      .carousel-container {
+        background-color: #f7f7f7; /* Color de fondo del carrusel */
+        padding: 20px;
+      }
+    
+      .carousel-item img {
+        max-height: 200px; /* Altura máxima de las imágenes */
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho */
+        object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio */
+        border-radius: 10px; /* Bordes redondeados para las imágenes */
+      }
+    
+      .card {
+        border: none; /* Elimina el borde predeterminado de las tarjetas */
+        border-radius: 10px; /* Bordes redondeados para las tarjetas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
+      }
+    
+      .card-body {
+        text-align: center;
+      }
+    
+      .card-title {
+        font-size: 24px;
+        margin-top: 10px;
+        color: #333; /* Color del título de la tarjeta */
+      }
+    
+      .card-text {
+        color: #666; /* Color del texto de la tarjeta */
+      }
+    
+      .btn-primary {
+        background-color: #007bff; /* Color del botón */
+        border-color: #007bff; /* Color del borde del botón */
+        color: #fff; /* Color del texto del botón */
+      }
+    </style>
+    
+    <h1>Corredor Turístico</h1>
+    
     <div class="carousel-container" style="height: 300px;">
-     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="card">
-          <img src="/img/casbas.webp" class="card-img-top" alt="Image 1">
-          <div class="card-body">
-            <h5 class="card-title">CASBAS</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">Visitar</a>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card">
+              <img src="/img/casbas.webp" class="card-img-top" alt="Image 1">
+              <div class="card-body">
+                <h5 class="card-title">CASBAS</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-primary">Visitar</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="carousel-item">
+            <div class="card">
+              <img src="/img/garre.jpg" class="card-img-top" alt="Image 2">
+              <div class="card-body">
+                <h5 class="card-title">Garre</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-primary">Visitar</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="carousel-item">
+            <div class="card">
+              <img src="/img/guamini.jpg" class="card-img-top" alt="Image 3">
+              <div class="card-body">
+                <h5 class="card-title">Laguna Alsina</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn btn-primary">Visitar</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="card">
-          <img src="/img/garre.jpg" class="card-img-top" alt="Image 2">
-          <div class="card-body">
-            <h5 class="card-title">Garre</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">Visitar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="card">
-          <img src="/img/guamini.jpg" class="card-img-top" alt="Image 3">
-          <div class="card-body">
-            <h5 class="card-title">Laguna Alsina</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">Visitar</a>
-          </div>
-        </div>
+    
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
-
-    <!-- Controls -->
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    
   </div>
 </div>
                   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
