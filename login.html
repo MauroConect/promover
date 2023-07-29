@@ -8,27 +8,35 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Tu Localidad</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Crear Localidad</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Crear Comercio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Crear Categorias</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
+    <div class="container mt-5">
+        <form>
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" class="form-control" id="usuario" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasena" required>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="iniciarSesion()">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <!-- Incluir los scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function iniciarSesion() {
+            // Simulación de inicio de sesión exitoso
+            // Aquí puedes agregar la lógica de autenticación real
+            window.location.href = "/crearcomercio.html";
+        }
+    </script>
                   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
                   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
                   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
