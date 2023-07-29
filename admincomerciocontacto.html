@@ -9,6 +9,7 @@
   </head>
   <body>
 
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/index.html">Tu Comercio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -66,35 +67,91 @@
             </ul>
         </div>
     </nav>
+        
+    <div class="collapse navbar-collapse" id="navbarNav">
+               
+        <!-- Menú exclusivo para el administrador de comercio -->
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProductos" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Productos (Crear-Editar)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
+                    <a class="dropdown-item" href="#">Crear Producto</a>
+                    <a class="dropdown-item" href="#">Editar Producto</a>
+                    <!-- Agrega más opciones según tus necesidades -->
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDescripcion" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Descripción (Crear-Editar)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownDescripcion">
+                    <a class="dropdown-item" href="#">Crear Descripción</a>
+                    <a class="dropdown-item" href="#">Editar Descripción</a>
+                    <!-- Agrega más opciones según tus necesidades -->
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContactos" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contactos (Crear-Editar)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownContactos">
+                    <a class="dropdown-item" href="#">Crear Contacto</a>
+                    <a class="dropdown-item" href="#">Editar Contacto</a>
+                    <!-- Agrega más opciones según tus necesidades -->
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServicios" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Servicios (Crear-Editar)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownServicios">
+                    <a class="dropdown-item" href="#">Crear Servicio</a>
+                    <a class="dropdown-item" href="#">Editar Servicio</a>
+                    <!-- Agrega más opciones según tus necesidades -->
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-  <div class="container mt-5">
-    <form>
-        <div class="form-group">
-            <label for="nombreProducto">Nombre del Producto:</label>
-            <input type="text" class="form-control" id="nombreProducto" required>
-        </div>
+    <div class="container mt-5">
+        <form>
+            <div class="form-group">
+                <label for="facebook">Facebook:</label>
+                <input type="text" class="form-control" id="facebook" placeholder="https://www.facebook.com/tu_pagina" required>
+            </div>
 
-        <div class="form-group">
-            <label for="imagenProducto">URL de la Imagen:</label>
-            <input type="text" class="form-control" id="imagenProducto" required>
-        </div>
+            <div class="form-group">
+                <label for="instagram">Instagram:</label>
+                <input type="text" class="form-control" id="instagram" placeholder="https://www.instagram.com/tu_pagina" required>
+            </div>
 
-        <div class="form-group">
-            <label for="descripcionProducto">Descripción del Producto:</label>
-            <textarea class="form-control" id="descripcionProducto" rows="3" required></textarea>
-        </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono" required>
+            </div>
 
-        <div class="form-group">
-            <label for="precioProducto">Precio:</label>
-            <input type="number" step="0.01" class="form-control" id="precioProducto" required>
-        </div>
+            <div class="form-group">
+                <label for="googleMaps">Google Maps:</label>
+                <input type="text" class="form-control" id="googleMaps" placeholder="https://maps.google.com/tu_ubicacion" required>
+            </div>
 
-        <button type="submit" class="btn btn-primary">Agregar Producto</button>
-    </form>
-</div>
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp:</label>
+                <input type="tel" class="form-control" id="whatsapp" placeholder="Ingrese su número de WhatsApp" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
 
 
-  </div>
                   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
                   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
                   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

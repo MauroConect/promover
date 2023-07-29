@@ -9,6 +9,7 @@
   </head>
   <body>
 
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/index.html">Tu Comercio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -67,34 +68,33 @@
         </div>
     </nav>
 
-  <div class="container mt-5">
-    <form>
+<div class="container mt-5">
+    <h1>Administrar Banner</h1>
+    <form id="bannerForm">
         <div class="form-group">
-            <label for="nombreProducto">Nombre del Producto:</label>
-            <input type="text" class="form-control" id="nombreProducto" required>
+            <label for="titulo">Título:</label>
+            <input type="text" class="form-control" id="titulo" required>
         </div>
 
         <div class="form-group">
-            <label for="imagenProducto">URL de la Imagen:</label>
-            <input type="text" class="form-control" id="imagenProducto" required>
+            <label for="descripcion">Descripción:</label>
+            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
         </div>
 
         <div class="form-group">
-            <label for="descripcionProducto">Descripción del Producto:</label>
-            <textarea class="form-control" id="descripcionProducto" rows="3" required></textarea>
+            <label for="imagen">Imagen URL:</label>
+            <input type="text" class="form-control" id="imagen" required>
         </div>
 
         <div class="form-group">
-            <label for="precioProducto">Precio:</label>
-            <input type="number" step="0.01" class="form-control" id="precioProducto" required>
+            <label for="enlace">Enlace:</label>
+            <input type="text" class="form-control" id="enlace" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Agregar Producto</button>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
     </form>
 </div>
 
-
-  </div>
                   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
                   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
                   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
