@@ -5,7 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
+    <style>
+        /* Estilos adicionales para mejorar la experiencia UI UX */
+        .accordion-item {
+          margin-bottom: 10px;
+        }
+    
+        @media (max-width: 768px) {
+          /* Ajuste para dispositivos móviles */
+          .form-group {
+            margin-bottom: 10px;
+          }
+    
+          .accordion-button {
+            width: 100%;
+          }
+    
+          .accordion-button::after {
+            content: "+";
+            float: right;
+          }
+    
+          .accordion-button.collapsed::after {
+            content: "-";
+          }
+        }
+      </style>
   </head>
   <body>
 
@@ -67,34 +92,391 @@
         </div>
     </nav>
 
-  <div class="container mt-5">
-    <form>
-        <div class="form-group">
-            <label for="nombreProducto">Nombre del Producto:</label>
-            <input type="text" class="form-control" id="nombreProducto" required>
-        </div>
-
-        <div class="form-group">
-            <label for="imagenProducto">URL de la Imagen:</label>
-            <input type="text" class="form-control" id="imagenProducto" required>
-        </div>
-
-        <div class="form-group">
-            <label for="descripcionProducto">Descripción del Producto:</label>
-            <textarea class="form-control" id="descripcionProducto" rows="3" required></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="precioProducto">Precio:</label>
-            <input type="number" step="0.01" class="form-control" id="precioProducto" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Agregar Producto</button>
-    </form>
-</div>
-
-
-  </div>
+    <div class="container mt-5">
+        <div class="container mt-5">
+            <div class="accordion" id="configuracionAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConfiguracion"
+                    aria-expanded="true" aria-controls="collapseConfiguracion">
+                    Configuración de Comercio
+                  </button>
+                </h2>
+                <div id="collapseConfiguracion" class="accordion-collapse collapse show" data-bs-parent="#configuracionAccordion">
+                  <div class="accordion-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="nombreComercio">Nombre del Comercio:</label>
+                        <input type="text" class="form-control" id="nombreProducto" required>
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="imagenProducto">URL de la Imagen:</label>
+                        <input type="text" class="form-control" id="imagenProducto" required>
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="descripcionComercio">Descripción del Comercio:</label>
+                        <textarea class="form-control" id="descripcionProducto" rows="3" required></textarea>
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="precioProducto">Precio:</label>
+                        <input type="number" step="0.01" class="form-control" id="precioProducto" required>
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <select class="form-control" id="estado" name="estado">
+                          <option value="abierto">Abierto</option>
+                          <option value="cerrado">Cerrado</option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    
+          <div class="container mt-5">
+            <h2>Configuración de Contacto</h2>
+            <div class="accordion" id="redesAccordion">
+    
+              <!-- Facebook -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFacebook" aria-expanded="false" aria-controls="collapseFacebook">
+                    Facebook
+                  </button>
+                </h2>
+    
+                <div id="collapseFacebook" class="accordion-collapse collapse" data-bs-parent="#redesAccordion">
+                  <div class="accordion-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="facebook">Facebook:</label>
+                        <input type="text" class="form-control" id="facebook" placeholder="https://www.facebook.com/tu_pagina"
+                          required>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Instagram -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseInstagram" aria-expanded="false" aria-controls="collapseInstagram">
+                    Instagram
+                  </button>
+                </h2>
+    
+                <div id="collapseInstagram" class="accordion-collapse collapse" data-bs-parent="#redesAccordion">
+                  <div class="accordion-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="instagram">Instagram:</label>
+                        <input type="text" class="form-control" id="instagram"
+                          placeholder="https://www.instagram.com/tu_pagina" required>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Teléfono -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTelefono" aria-expanded="false" aria-controls="collapseTelefono">
+                    Teléfono
+                  </button>
+                </h2>
+    
+                <div id="collapseTelefono" class="accordion-collapse collapse" data-bs-parent="#redesAccordion">
+                  <div class="accordion-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono"
+                          required>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Google Maps -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseGoogleMaps" aria-expanded="false" aria-controls="collapseGoogleMaps">
+                    Google Maps
+                  </button>
+                </h2>
+    
+                <div id="collapseGoogleMaps" class="accordion-collapse collapse" data-bs-parent="#redesAccordion">
+                  <div class="accordion-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="googleMaps">Google Maps:</label>
+                        <input type="text" class="form-control" id="googleMaps"
+                          placeholder="https://maps.google.com/tu_ubicacion" required>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- WhatsApp -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWhatsApp" aria-expanded="false" aria-controls="collapseWhatsApp">
+                    WhatsApp
+                  </button>
+                </h2>
+    
+                <div id="collapseWhatsApp" class="accordion-collapse collapse" data-bs-parent="#redesAccordion">
+                  <div class="accordion-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="whatsapp">WhatsApp:</label>
+                        <input type="tel" class="form-control" id="whatsapp" placeholder="Ingrese su número de WhatsApp"
+                          required>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+    
+          <div class="container mt-5">
+            <h2>Horarios de apertura</h2>
+            <div class="accordion" id="accordionExample">
+          
+              <!-- Acordeón para el día Lunes -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseLunes" aria-expanded="false" aria-controls="collapseLunes">
+                    Lunes
+                  </button>
+                </h2>
+          
+                <div id="collapseLunes" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-group">
+                      <label for="hora_apertura_lunes">Hora de apertura:</label>
+                      <select class="form-control" id="hora_apertura_lunes" name="hora_apertura_lunes">
+                        <!-- Aquí puedes generar las opciones para las horas, por ejemplo, desde las 00 hasta las 23 -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+          
+                    <div class="form-group">
+                      <label for="hora_cierre_lunes">Hora de cierre:</label>
+                      <select class="form-control" id="hora_cierre_lunes" name="hora_cierre_lunes">
+                        <!-- Mismo proceso que para la hora de apertura -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Repite la estructura del acordeón para los demás días de la semana -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseMartes" aria-expanded="false" aria-controls="collapseMartes">
+                    Martes
+                  </button>
+                </h2>
+          
+                <div id="collapseMartes" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-group">
+                      <label for="hora_apertura_martes">Hora de apertura:</label>
+                      <select class="form-control" id="hora_apertura_martes" name="hora_apertura_martes">
+                        <!-- Aquí puedes generar las opciones para las horas, por ejemplo, desde las 00 hasta las 23 -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+          
+                    <div class="form-group">
+                      <label for="hora_cierre_martes">Hora de cierre:</label>
+                      <select class="form-control" id="hora_cierre_martes" name="hora_cierre_martes">
+                        <!-- Mismo proceso que para la hora de apertura -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Repite la estructura del acordeón para los demás días de la semana -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseMiercoles" aria-expanded="false" aria-controls="collapseMiercoles">
+                    Miércoles
+                  </button>
+                </h2>
+          
+                <div id="collapseMiercoles" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-group">
+                      <label for="hora_apertura_miercoles">Hora de apertura:</label>
+                      <select class="form-control" id="hora_apertura_miercoles" name="hora_apertura_miercoles">
+                        <!-- Aquí puedes generar las opciones para las horas, por ejemplo, desde las 00 hasta las 23 -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+          
+                    <div class="form-group">
+                      <label for="hora_cierre_miercoles">Hora de cierre:</label>
+                      <select class="form-control" id="hora_cierre_miercoles" name="hora_cierre_miercoles">
+                        <!-- Mismo proceso que para la hora de apertura -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Repite la estructura del acordeón para los demás días de la semana -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseJueves" aria-expanded="false" aria-controls="collapseJueves">
+                    Jueves
+                  </button>
+                </h2>
+          
+                <div id="collapseJueves" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-group">
+                      <label for="hora_apertura_jueves">Hora de apertura:</label>
+                      <select class="form-control" id="hora_apertura_jueves" name="hora_apertura_jueves">
+                        <!-- Aquí puedes generar las opciones para las horas, por ejemplo, desde las 00 hasta las 23 -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+          
+                    <div class="form-group">
+                      <label for="hora_cierre_jueves">Hora de cierre:</label>
+                      <select class="form-control" id="hora_cierre_jueves" name="hora_cierre_jueves">
+                        <!-- Mismo proceso que para la hora de apertura -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Repite la estructura del acordeón para los demás días de la semana -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseViernes" aria-expanded="false" aria-controls="collapseViernes">
+                    Viernes
+                  </button>
+                </h2>
+          
+                <div id="collapseViernes" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-group">
+                      <label for="hora_apertura_viernes">Hora de apertura:</label>
+                      <select class="form-control" id="hora_apertura_viernes" name="hora_apertura_viernes">
+                        <!-- Aquí puedes generar las opciones para las horas, por ejemplo, desde las 00 hasta las 23 -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+          
+                    <div class="form-group">
+                      <label for="hora_cierre_viernes">Hora de cierre:</label>
+                      <select class="form-control" id="hora_cierre_viernes" name="hora_cierre_viernes">
+                        <!-- Mismo proceso que para la hora de apertura -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Repite la estructura del acordeón para los demás días de la semana -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSabado" aria-expanded="false" aria-controls="collapseSabado">
+                    Sábado
+                  </button>
+                </h2>
+          
+                <div id="collapseSabado" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-group">
+                      <label for="hora_apertura_sabado">Hora de apertura:</label>
+                      <select class="form-control" id="hora_apertura_sabado" name="hora_apertura_sabado">
+                        <!-- Aquí puedes generar las opciones para las horas, por ejemplo, desde las 00 hasta las 23 -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+          
+                    <div class="form-group">
+                      <label for="hora_cierre_sabado">Hora de cierre:</label>
+                      <select class="form-control" id="hora_cierre_sabado" name="hora_cierre_sabado">
+                        <!-- Mismo proceso que para la hora de apertura -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Repite la estructura del acordeón para los demás días de la semana -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseDomingo" aria-expanded="false" aria-controls="collapseDomingo">
+                    Domingo
+                  </button>
+                </h2>
+          
+                <div id="collapseDomingo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-group">
+                      <label for="hora_apertura_domingo">Hora de apertura:</label>
+                      <select class="form-control" id="hora_apertura_domingo" name="hora_apertura_domingo">
+                        <!-- Aquí puedes generar las opciones para las horas, por ejemplo, desde las 00 hasta las 23 -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+          
+                    <div class="form-group">
+                      <label for="hora_cierre_domingo">Hora de cierre:</label>
+                      <select class="form-control" id="hora_cierre_domingo" name="hora_cierre_domingo">
+                        <!-- Mismo proceso que para la hora de apertura -->
+                        <!-- Opcional: Puedes cargar las opciones desde JavaScript si prefieres -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+    
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
                   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
                   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
                   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
